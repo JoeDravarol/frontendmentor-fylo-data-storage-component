@@ -20,7 +20,6 @@ body {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  grid-gap: 1.5em;
   justify-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -36,6 +35,14 @@ body {
   background-image: url("../images/bg-mobile.png");
   background-size: cover;
   z-index: -5;
+}
+
+.data-storage {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.5em;
+  justify-items: center;
 }
 
 .features {
