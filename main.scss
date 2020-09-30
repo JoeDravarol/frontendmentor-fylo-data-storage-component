@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
 
-$gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+$progress-gradient: (
+  "from": hsl(6, 100%, 80%),
+  "to": hsl(335, 100%, 65%)
+);
 $pale-blue: hsl(243, 100%, 93%);
 $grayish-blue: hsl(229, 7%, 55%);
 $dark-blue: hsl(228, 56%, 26%);
@@ -17,4 +20,133 @@ $very-dark-blue:  hsl(229, 57%, 11%);
 body {
   font-size: 14px;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
+  color: $pale-blue;
+}
+
+.wrapper {
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1.5em;
+  justify-items: center;
+  align-content: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg-mobile.png');
+    background-size: cover;
+    z-index: -5;
+  }
+}
+
+.features {
+  background: $dark-blue;
+  padding: 2.5em;
+  border-radius: 10px;
+  border-top-right-radius: 90px;
+  width: 100%;
+  min-height: 200px;
+  max-width: 400px;
+  display: grid;
+  align-content: space-evenly;
+}
+
+.logo {
+  margin-bottom: 1em;
+}
+
+.feature {
+  display: flex;
+
+  &__button {
+    background: $very-dark-blue;
+    border: none;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    margin-right: 1.15em;
+    cursor: pointer;
+
+    &:hover {
+      .feature__icon path{
+        fill: $pale-blue;
+      }
+    }
+  }
+}
+
+.storage-info {
+  background: $dark-blue;
+  text-align: center;
+  padding: 2.5em;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+
+  &__heading {
+    font-size: 1em;
+    font-weight: 400;
+
+    em {
+      font-weight: bold;
+    }
+  }
+
+  &__progress {
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  &__capacity {
+    width: 100%;
+    margin-bottom: 2em;
+    font-size: .9em;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__available {
+    background: #fff;
+    color: #000;
+    font-size: 2.5em;
+    padding: .25em;
+    border-radius: 10px;
+    width: 60%;
+    min-width: 170px;
+    max-width: 230px;
+    height: 75px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    left: 50%;
+    bottom: -35px;
+    transform: translateX(-50%);
+
+    &--small {
+      font-size: .35em;
+      color: $grayish-blue;
+      vertical-align: middle;
+    }
+  }
+}
+
+.attribution {
+  margin-top: 10em;
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
 }

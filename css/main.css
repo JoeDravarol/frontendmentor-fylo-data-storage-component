@@ -11,5 +11,147 @@
 body {
   font-size: 14px;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
+  color: #dddbff;
+}
+
+.wrapper {
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.5em;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg-mobile.png");
+  background-size: cover;
+  z-index: -5;
+}
+
+.features {
+  background: #1d2c67;
+  padding: 2.5em;
+  border-radius: 10px;
+  border-top-right-radius: 90px;
+  width: 100%;
+  min-height: 200px;
+  max-width: 400px;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+}
+
+.logo {
+  margin-bottom: 1em;
+}
+
+.feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.feature__button {
+  background: #0c122c;
+  border: none;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  margin-right: 1.15em;
+  cursor: pointer;
+}
+
+.feature__button:hover .feature__icon path {
+  fill: #dddbff;
+}
+
+.storage-info {
+  background: #1d2c67;
+  text-align: center;
+  padding: 2.5em;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.storage-info__heading {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.storage-info__heading em {
+  font-weight: bold;
+}
+
+.storage-info__progress {
+  width: 100%;
+  margin: 1em 0;
+}
+
+.storage-info__capacity {
+  width: 100%;
+  margin-bottom: 2em;
+  font-size: .9em;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.storage-info__available {
+  background: #fff;
+  color: #000;
+  font-size: 2.5em;
+  padding: .25em;
+  border-radius: 10px;
+  width: 60%;
+  min-width: 170px;
+  max-width: 230px;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: -35px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.storage-info__available--small {
+  font-size: .35em;
+  color: #848794;
+  vertical-align: middle;
+}
+
+.attribution {
+  margin-top: 10em;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
 }
 /*# sourceMappingURL=main.css.map */
