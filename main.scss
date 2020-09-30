@@ -100,8 +100,47 @@ body {
   }
 
   &__progress {
+    $from: map-get($progress-gradient, "from");
+    $to: map-get($progress-gradient, "to");
+
+    background: $very-dark-blue;
     width: 100%;
+    height: 23px;
+    padding: .25em;
     margin: 1em 0;
+    border: none;
+    border-radius: 10px;
+
+    appearance: none; // Reset default appearance
+    position: relative;
+
+    &::-webkit-progress-bar {
+      border-radius: 10px;
+      background: $very-dark-blue;
+    }
+
+    &::-moz-progress-bar {
+      background: linear-gradient(to right, $from, $to);
+      border-radius: 10px;
+      position: relative;
+    }
+
+    &::-webkit-progress-value {
+      background: linear-gradient(to right, $from, $to);
+      border-radius: 10px;
+    }
+
+    // Progress circle indicator
+    &::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 100%;
+      position: absolute;
+      right: calc(100% - 79.5%); // Static (Doesn't work with actual progress value)
+      top: .4em;
+    }
   }
 
   &__capacity {
