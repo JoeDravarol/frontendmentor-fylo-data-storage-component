@@ -198,4 +198,57 @@ body {
 .attribution a {
   color: #3e52a3;
 }
+
+@media (min-width: 1440px) {
+  body {
+    background: #0c122c;
+  }
+  .wrapper::before {
+    background-image: url("../images/bg-desktop.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+  .data-storage {
+    max-width: 1000px;
+    -ms-grid-columns: 1.25fr 2fr;
+        grid-template-columns: 1.25fr 2fr;
+    grid-gap: initial;
+    justify-items: start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+  .features {
+    max-width: 350px;
+  }
+  .storage-info {
+    text-align: left;
+    max-width: 600px;
+  }
+  .storage-info__capacity {
+    margin: initial;
+  }
+  .storage-info__available {
+    max-width: 190px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-bottom-right-radius: initial;
+    top: -1.1em;
+    right: 1.15em;
+    left: initial;
+    bottom: initial;
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  .storage-info__available::after {
+    content: '';
+    position: absolute;
+    bottom: -.5em;
+    right: 0;
+    border-top: 20px solid #fff;
+    border-left: 20px solid transparent;
+  }
+}
 /*# sourceMappingURL=main.css.map */
